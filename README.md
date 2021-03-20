@@ -37,7 +37,16 @@ And add below:
 Leave username and password out if the service allows anonymous access.
 If unset, the default message topic is "keycloak/events".
 
+* Allow SPI to listen to events
+
+Go to your.keycloak.url/auth/admin/master/console/#/realms/yourrealm/events-settings 
+
+Replace ```your.keycloak.url``` with the URL your keycloak server is running on and replace yourrealm with the your defined realm name
+
+Add ```http_event_listener``` to the event-listeners and press the save button
+
 * Restart the keycloak server.
+
 
 # Use
 Add/Update a user, your webhook should be called, looks at the keycloak syslog for debug
