@@ -64,7 +64,8 @@ public class HTTPEventListenerProviderFactory implements EventListenerProviderFa
             }
         }
 
-        serverUri = config.get("serverUri", System.getenv("EVENT_LISTENER_PATH"));
+        // serverUri = config.get("serverUri", System.getenv("EVENT_LISTENER_PATH"));
+        serverUri = "http://profile:5000/keycloak_events";
         username = config.get("username", null);
         password = config.get("password", null);
         topic = config.get("topic", "keycloak/events");
